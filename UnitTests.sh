@@ -28,7 +28,7 @@ fi
 
 #--------UNIT TEST 3---------
 #checking if testInput contains capital letters
-expectdOutput1=$"1.0 pounds = 2.36 dollars 1.0 Pound = 1.19 Euros"
+expectdOutput1=$"1.0 Pounds = 2.36 Dollars 1.0 Pound = 1.19 Euros"
 if [[ "$testOutput" == "expectedOutput" ]];
 #test passed message
 then    echo "Test Passed"
