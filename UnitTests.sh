@@ -28,7 +28,8 @@ fi
 
 #--------UNIT TEST 3---------
 #checking if testInput contains capital letters
-if [[ "$testInput" =~ [A-Z] ]];
+expectdOutput1=$"1.0 Pounds = 2.36 Dollars"
+if [[ "$testOutput" = "expectedOutput" ]];
 #test failed display message
 then    echo "Test Failed"
 exit 1
