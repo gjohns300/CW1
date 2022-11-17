@@ -1,11 +1,11 @@
 #!/bin/bash
 #--------UNIT TEST 1----------
 #setting java value to testInput1 to be tested
-testInput=$"1 pounds"
-testOutput=$(java CurrencyConverter $testInput)
+input=$"1 pounds"
+actualOutput=$(java CurrencyConverter $testInput)
 
 #checking if testInput is empty
-if [ -z "$testInput" ];
+if [ -z "$actualInput" ];
 #test failed display message
 then    echo "Test Failed"
 exit 1
@@ -15,7 +15,7 @@ fi
 
 #--------UNIT TEST 2---------
 #checking if testInput contains capital letters
-if [[ "$testInput" =~ [A-Z] ]];
+if [[ "$actualInput" =~ [A-Z] ]];
 #test failed display message
 then    echo "Test Failed"
 exit 1
@@ -29,7 +29,7 @@ fi
 #--------UNIT TEST 3---------
 #checking if testInput contains capital letters
 expectdOutput=$"1.0 Pounds = 2.36 Dollars 1.0 Pound = 1.19 Euros"
-if [[ "$testOutput" == "expectedOutput" ]];
+if [[ "$actualOutput" == "expectedOutput" ]];
 #test passed message
 then    echo "Test Passed"
 else	echo "Test Failed"
