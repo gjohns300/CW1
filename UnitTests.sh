@@ -2,7 +2,7 @@
 #--------UNIT TEST 1----------
 #setting java value to testInput1 to be tested
 input=$"1 pounds"
-actualOutput=$(java CurrencyConverter $testInput)
+actualOutput=$(java -CurrencyConverter $testInput)
 
 #checking if testInput is empty
 if [ -z "$actualInput" ];
