@@ -30,11 +30,10 @@ fi
 #checking if testInput contains capital letters
 expectdOutput1=$"1.0 Pounds = 2.36 Dollars"
 if [[ "$testOutput" = "expectedOutput" ]];
-#test failed display message
-then    echo "Test Failed"
-exit 1
 #test passed message
-else    echo "Test Passed"
+then    echo "Test Passed"
+else	echo "Test Failed"
+exit 1
 fi
 
 
