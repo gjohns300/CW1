@@ -1,7 +1,7 @@
 #!/bin/bash
 #--------UNIT TEST 1----------
 #setting java value to testInput1 to be tested
-testInput=$"1 pounds"
+testInput=$"1 Pounds"
 testOutput=$(java CurrencyConverter $testInput)
 
 #checking if testInput is empty
