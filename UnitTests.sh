@@ -9,8 +9,8 @@ echo java CurrencyConveter $input
 #checking if input is empty
 if [ -z "$input" ];
 #test failed display message
-then    echo "Test Failed"
-exit 1
+then    echo "No input detected. Please input your amount and then currency"
+exit 0
 #test passed message
 else    echo "Test Passed"
 fi
@@ -49,6 +49,7 @@ if [[ "$actualOutput" == "$expectedOutcome1" ]];
 #test passed message
 then    echo "Test Passed"
 else    echo "Test Failed"
+exit 1
 fi
 
 input=$"1 pounds"
