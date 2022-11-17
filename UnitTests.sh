@@ -4,7 +4,7 @@
 input=$"20 euros"
 actualOutput=$(java CurrencyConverter $input)
 
-echo java CurrencyConveter $input
+failCount=0
 
 #checking if input is empty
 if [ -z "$input" ];
@@ -30,7 +30,6 @@ actualOutput=$(java CurrencyConverter $input)
 if [[ "$input" =~ [A-Z] ]];
 #test failed display message
 then    echo "Test Failed"
-exit 1
 #test passed message
 else    echo "Test Passed"
 fi
@@ -76,7 +75,7 @@ Thank you for using the converter."
 if [[ "$actualOutput" == "$expectedOutcome3" ]];
 #test passed message
 then    echo "Test Passed"
-else    echo "Test Failed"
+else    echo "Test Failed" 
 fi
 
 
