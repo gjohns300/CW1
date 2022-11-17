@@ -1,10 +1,12 @@
 #!/bin/bash
 #--------UNIT TEST 1----------
 #setting java value to testInput1 to be tested
-input=$"1 Pounds"
+input=$"20 euros"
 actualOutput=$(java CurrencyConverter $input)
 
-#checking if testInput is empty
+echo java CurrencyConveter $input
+
+#checking if input is empty
 if [ -z "$input" ];
 #test failed display message
 then    echo "Test Failed"
@@ -13,12 +15,21 @@ exit 1
 else    echo "Test Passed"
 fi
 
+inputLastChar=${input: -1}
+if [[ $inputLastChar =~ [0-9] ]];
+then	echo "Incorrect format of input. Please enter amount of currency before type"
+else 	echo "Test Passed"
+fi
+
 #--------UNIT TEST 2---------
+
+input=$"50 DOLLARS"
+actualOutput=$(java CurrencyConverter $input)
+
 #checking if testInput contains capital letters
 if [[ "$input" =~ [A-Z] ]];
 #test failed display message
 then    echo "Test Failed"
-exit 1
 #test passed message
 else    echo "Test Passed"
 fi
