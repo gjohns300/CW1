@@ -30,6 +30,7 @@ actualOutput=$(java CurrencyConverter $input)
 if [[ "$input" =~ [A-Z] ]];
 #test failed display message
 then    echo "Test Failed"
+exit 1
 #test passed message
 else    echo "Test Passed"
 fi
@@ -49,7 +50,6 @@ if [[ "$actualOutput" == "$expectedOutcome1" ]];
 #test passed message
 then    echo "Test Passed"
 else    echo "Test Failed"
-exit 1
 fi
 
 input=$"1 pounds"
