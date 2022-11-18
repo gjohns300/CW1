@@ -5,7 +5,7 @@ public class CurrencyConverter {
 
         public static void main(String[] args) {
 
-		if(args == null)
+		if(args.length == 0)
 		{
 			System.out.println("No input detected. Please input your amount and then currency");
 			System.exit(0);
