@@ -3,14 +3,14 @@ import java.text.DecimalFormat;
 
 public class CurrencyConverter {
 
-        public static void main(String[] args.toLowerCase()) {
+        public static void main(String[] args) {
 
                 double amount, dollar, pound, code, euro;
 
                 DecimalFormat f = new DecimalFormat("##.##");
 
                 amount = Integer.parseInt(args[0]);
-                String currency = args[1];
+                String currency = args[1].toLowerCase();
 
                 // For amounts Conversion
                 switch (currency){
