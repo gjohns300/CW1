@@ -22,14 +22,34 @@ fi
 
 #--------UNIT TEST 2---------
 
-input=$"50 DOLLARS"
+input=$"50 euros"
 
 #checking if input contains capital letters
 if [[ "$input" =~ [[:upper:]] ]];
-#test failed display message
-then    echo "Checking for capital letter - Test Failed"
-#test passed message
-else    echo "Checking for capital letter - Test Passed"
+#contains capital yes message
+then    echo "Checking for capital letter - Yes"
+#contains capital no message
+else    echo "Checking for capital letter - No"
+fi
+
+input=$"50 POUNDS"
+
+#checking if input contains capital letters
+if [[ "$input" =~ [[:upper:]] ]];
+#contains capital yes message
+then    echo "Checking for capital letter - Yes"
+#contains capital no message
+else    echo "Checking for capital letter - No"
+fi
+
+input=$"50 Dollars"
+
+#checking if input contains capital letters
+if [[ "$input" =~ [[:upper:]] ]];
+#contains capital yes message
+then    echo "Checking for capital letter - Yes"
+#contains capital no message
+else    echo "Checking for capital letter - No"
 fi
 
 
