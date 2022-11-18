@@ -1,15 +1,17 @@
 #!/bin/bash
 #--------UNIT TEST 1----------
 #setting java value to input to be tested
-input=$"1 pounds"
-#checking if input is empty
-if [ -z "$input" ];
+input=$""
+actualOutput=$(java CurrencyConverter $input)
+expectedOutput$="No input detected. Please input your amount and then currency"
+
+#checking if inputs match
+if [[ "actualOutput" == "expectedOutput" ]];
 #user notification display message
-then    echo "No input detected. Please input your amount and then currency"
-#test failed message
-	echo "Checking for empty value - Test Failed"
 #test passed message
-else    echo "Checking for empty value - Test Passed"
+then	echo "Checking for empty value - Test Passed"
+#test failed message
+else    echo "Checking for empty value - Test Failed"
 fi
 
 #checking is last character is a number. If it is test fails due to wrong formatting
