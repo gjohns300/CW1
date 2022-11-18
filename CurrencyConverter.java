@@ -10,7 +10,7 @@ public class CurrencyConverter {
                 DecimalFormat f = new DecimalFormat("##.##");
 
                 amount = Integer.parseInt(args[0]);
-                String currency = args[1];
+                String currency = args[1].toLowerCase();
 
                 // For amounts Conversion
                 switch (currency){
@@ -23,14 +23,14 @@ public class CurrencyConverter {
                                 break;
                         case "pounds":
                                 // For Pound Conversion
-                                dollar = amount + 1.36;
+                                dollar = amount * 1.36;
                                 System.out.println(amount + " Pounds = " + f.format(dollar) + " Dollars");
                                 euro = amount * 1.19;
                                 System.out.println(amount + " Pound = " + f.format(euro) + " Euros");
                                 break;
                         case "euros":
                                 // For Euro Conversion
-                                dollar = amount * 1.31;
+                                dollar = amount * 1.13;
                                 System.out.println(amount + " Euros = " + f.format(dollar) + " Dollars");
                                 pound = amount * 0.84;
                                 System.out.println(amount + " Euros = " + f.format(pound) + " Pounds");
