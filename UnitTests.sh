@@ -1,9 +1,8 @@
 #!/bin/bash
 #--------UNIT TEST 1----------
 #setting java value to input to be tested
-input=$""
-actualOutput=$(java CurrencyConverter $input)
-expectedOutput$="No input detected. Please input your amount and then currency"
+actualOutput=$(java CurrencyConverter)
+expectedOutput=$"No input detected. Please input your amount and then currency"
 
 #checking if inputs match
 if [[ "actualOutput" == "expectedOutput" ]];
