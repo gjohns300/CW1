@@ -23,7 +23,7 @@ fi
 #--------UNIT TEST 2---------
 
 input=$"50 DOLLARS"
-actualOutput=$(java CurrencyConverter $input)
+actualOutput=$(java CurrencyConverter 50 DOLLARS)
 echo $actualOutput
 
 #checking if testInput contains capital letters
