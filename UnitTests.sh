@@ -1,7 +1,7 @@
 #!/bin/bash
-#--------UNIT TEST 1----------
+#-------UNIT TEST 1----------
 
-echo "------Unit Test 1------"
+echo "--------Unit Test 1------"
 
 #setting input to blank value and passing through CurrencyConverter.java
 actualOutput=$(java CurrencyConverter)
