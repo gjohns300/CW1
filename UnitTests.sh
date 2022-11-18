@@ -1,7 +1,7 @@
 #!/bin/bash
 #--------UNIT TEST 1----------
 #setting java value to input to be tested
-input=$"20 euros"
+read input
 #checking if input is empty
 if [ -z "$input" ];
 #user notification display message
@@ -23,7 +23,7 @@ fi
 #--------UNIT TEST 2---------
 
 input=$"50 DOLLARS"
-actualOutput=$(java CurrencyConverter $input)
+actualOutput=$(java CurrencyConverter(currency) $input)
 echo $actualOutput
 
 #checking if testInput contains capital letters
