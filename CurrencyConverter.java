@@ -5,11 +5,11 @@ public class CurrencyConverter {
 
         public static void main(String[] args) {
 
-		if (args.length == 0) {
+		if (args.length==0){
 			System.out.println("No input detected. Please input your amount and then currency");
 			System.exit(0);
 		}
-
+		else {
                 double amount, dollar, pound, code, euro;
 
                 DecimalFormat f = new DecimalFormat("##.##");
@@ -43,6 +43,8 @@ public class CurrencyConverter {
                 }
                 System.out.println("Thank you for using the converter.");
         }
+
+}
 
 }
 
