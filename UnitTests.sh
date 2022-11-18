@@ -70,7 +70,7 @@ fi
 input=$"1 euros"
 actualOutput=$(java CurrencyConverter $input)
 
-expectedOutcome3="1 Euros = 1.13 Dollars
+expectedOutcome3="1.0 Euros = 1.13 Dollars
 1.0 Euros = 0.84 Pounds
 Thank you for using the converter."
 
