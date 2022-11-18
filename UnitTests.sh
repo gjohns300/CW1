@@ -7,9 +7,9 @@ if [ -z "$input" ];
 #user notification display message
 then    echo "No input detected. Please input your amount and then currency"
 #test failed message
-	echo "Test Failed"
+	echo "Checking for empty value - Test Failed"
 #test passed message
-else    echo "Test Passed"
+else    echo "Checking for empty value - Test Passed"
 fi
 
 #checking is last character is a number. If it is test fails due to wrong formatting
@@ -17,7 +17,7 @@ inputLastChar=${input: -1}
 if [[ $inputLastChar =~ [0-9] ]];
 then	echo "Incorrect format of input. Please enter amount of currency before type"
 #test passed message
-else 	echo "Test Passed"
+else 	echo "Checking for correct format - Test Passed"
 fi
 
 #--------UNIT TEST 2---------
@@ -27,9 +27,9 @@ input=$"50 DOLLARS"
 #checking if testInput contains capital letters
 if [[ "$input" =~ [[:upper:]] ]];
 #test failed display message
-then    echo "Test Failed"
+then    echo "Checking for capital letter - Test Failed"
 #test passed message
-else    echo "Test Passed"
+else    echo "Checking for capital letter - Test Passed"
 fi
 
 
@@ -45,9 +45,9 @@ actualOutput=$(java CurrencyConverter $input)
 
 if [[ "$actualOutput" == "$expectedOutcome1" ]];
 #test passed message
-then    echo "Test Passed"
+then    echo "Checking dollar conversion - Test Passed"
 #test failed message
-else    echo "Test Failed"
+else    echo "Checking dollar conversion - Test Failed"
 exit 1
 fi
 
@@ -61,9 +61,9 @@ Thank you for using the converter."
 
 if [[ "$actualOutput" == "$expectedOutcome2" ]];
 #test passed message
-then    echo "Test Passed"
+then    echo "Checking pound conversion - Test Passed"
 #test failed message
-else	echo "Test Failed"
+else	echo "Checking pound conversion - Test Failed"
 exit 1
 fi
 
@@ -77,9 +77,9 @@ Thank you for using the converter."
 #checking euros conversion works
 if [[ "$actualOutput" == "$expectedOutcome3" ]];
 #test passed message
-then    echo "Test Passed"
+then    echo "Checking euro conversion - Test Passed"
 #test failed message
-else    echo "Test Failed"
+else    echo "Checking euro conversion - Test Failed"
 exit 1
 fi
 
