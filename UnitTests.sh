@@ -1,39 +1,40 @@
 #!/bin/bash
 #--------UNIT TEST 1----------
-#setting java value to input to be tested
+
 echo "-------Unit Test 1------"
 
+#setting input to blank value and passing through CurrencyConverter.java
 actualOutput=$(java CurrencyConverter)
 expectedOutput=$"No input detected. Please input your amount and then currency"
+
 #checking if outputs match
 if [[ "$actualOutput" == "$expectedOutput" ]];
-#user notification display message
 #test passed message
 then	echo "Checking for empty value - Test Passed"
 #test failed message
 else    echo "Checking for empty value - Test Failed"
 fi
 
-#checking is last character is a number. If it is test fails due to wrong formatting
+#setting input to wrong format and passing through CurrencyConverter.java
 input=$"dollars 1"
 actualOutput=$(java CurrencyConverter $input)
-expectedOutput=$"Wrong format entered
+expectedOutput=$"Wrong Format Entered
 1.0 Dollars = 0.74 Pounds
 1.0 Dollars = 0.88 Euros
 Thank you for using the converter."
 
-echo $actualOutput
+#checking if outputs match
 if [[ "$actualOutput" == "$expectedOutput" ]];
+#test passed message
 then	echo "Checking for correct format - Test Passed"
 #test passed message
-else 	echo "Incorrect format of input. Please enter amount of currency before type"
-
+else 	echo "Checking for correcy format - Test Failed"
 fi
 
 #--------UNIT TEST 2---------
 echo "-------Unit Test 2------"
 
-
+#setting input to all caps and passing through CurrencyConverter.java
 input=$"1 DOLLARS"
 actualOutput=$(java CurrencyConverter $input)
 expectedOutput=$"1.0 Dollars = 0.74 Pounds
@@ -43,7 +44,6 @@ Thank you for using the converter."
 #checking if input contains capital letters
 #checking if outputs match
 if [[ "$actualOutput" == "$expectedOutput" ]];
-#user notification display message
 #test passed message
 then    echo "Checking for conversion value - Test Passed"
 #test failed message
