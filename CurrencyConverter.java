@@ -10,7 +10,7 @@ public class CurrencyConverter {
                 DecimalFormat f = new DecimalFormat("##.##");
 
                 amount = Integer.parseInt(args[0]);
-                String currency = args[1].toLowerCase();
+                String currency = args[1];
 
                 // For amounts Conversion
                 switch (currency){
