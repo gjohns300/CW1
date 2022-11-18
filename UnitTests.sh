@@ -24,9 +24,10 @@ fi
 
 input=$"50 DOLLARS"
 actualOutput=$(java CurrencyConverter $input)
+echo $actualOutput
 
 #checking if testInput contains capital letters
-if [[ "$actualInput" =~ [[:upper:]] ]];
+if [[ "$actualOutput" =~ [[:upper:]] ]];
 #test failed display message
 then    echo "Checking for capital letter - Test Failed"
 #test passed message
