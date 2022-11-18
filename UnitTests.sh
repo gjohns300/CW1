@@ -28,7 +28,7 @@ if [[ "$actualOutput" == "$expectedOutput" ]];
 #test passed message
 then	echo "Checking for correct format - Test Passed"
 #test passed message
-else 	echo "Checking for correcy format - Test Failed"
+else 	echo "Checking for correct format - Test Failed"
 fi
 
 #--------UNIT TEST 2---------
@@ -45,9 +45,9 @@ Thank you for using the converter."
 #checking if outputs match
 if [[ "$actualOutput" == "$expectedOutput" ]];
 #test passed message
-then    echo "Checking for conversion value - Test Passed"
+then    echo "Checking for capital letters - Test Passed"
 #test failed message
-else    echo "Checking for empty value - Test Failed"
+else    echo "Checking for capital letters - Test Failed"
 fi
 
 
