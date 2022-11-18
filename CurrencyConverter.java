@@ -5,16 +5,25 @@ public class CurrencyConverter {
 
         public static void main(String[] args) {
 
-		if (args.length==0){
-			System.out.println("No input detected. Please input your amount and then currency");
-			System.exit(0);
-		}
-		else {
+		if (args.length == 0){
+   		 	System.out.println("No input detected. Please input your amount and then currency");
+    			System.exit(0);
+  		} else{
+
                 double amount, dollar, pound, code, euro;
 
-                DecimalFormat f = new DecimalFormat("##.##");
+                DecimalFormat f = new DecimalFormat("##.##");	
+
+		if(Character.isDigit(args[1].charAt(0))){
+		var temp = args[0];
+		args[0] = args[1];
+		args[1] = temp;
+
+		System.out.println("Wrong Format Entered");
+		}
 
                 amount = Integer.parseInt(args[0]);
+
                 String currency = args[1].toLowerCase();
 
                 // For amounts Conversion
@@ -42,9 +51,8 @@ public class CurrencyConverter {
                                 break;
                 }
                 System.out.println("Thank you for using the converter.");
+		}
         }
-
-}
 
 }
 
